@@ -1,0 +1,41 @@
+<div>Hello {{ title }}</div>
+<div>{{ description }}</div>
+<button class="btn btn-primary" (click)="On()">incrémenter</button> {{ nbr }}
+<button (click)="titlechange()">change the title</button>
+
+<div>Liste des personnes</div>
+<button (click)="toggletable()">New</button>
+
+<form  *ngIf="showForm" action="" method="post">
+    <input  [(ngModel)]="DataPerson.Nom" type="text" name="Nom" id="">
+    <input   [(ngModel)]="DataPerson.Prenom"type="text" name="Prenom" id="">
+    <input   [(ngModel)]="DataPerson.Age" type="number" name="Age" id="">
+    <button (click)="Add()" class="btn btn-dark">Add</button>
+</form>
+{{ DataPerson.Nom}}
+{{ DataPerson.Prenom}}
+{{ DataPerson.Age}}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Age</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let personne of personnes">
+            <td>{{ personne.nom }}</td>
+            <td>{{ personne.prenom }}</td>
+            <td>{{ personne.age }}</td>
+        <td> <button class="btn btn-danger">supp</button></td>
+        <td><button class="btn btn-warning">Modif</button></td>
+        </tr>
+        <tr>
+            <td scope="row"></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
