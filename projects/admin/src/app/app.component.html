@@ -7,14 +7,14 @@
 <button (click)="toggletable()">New</button>
 
 <form  *ngIf="showForm" action="" method="post">
-    <input  [(ngModel)]="DataPerson.Nom" type="text" name="Nom" id="">
-    <input   [(ngModel)]="DataPerson.Prenom"type="text" name="Prenom" id="">
-    <input   [(ngModel)]="DataPerson.Age" type="number" name="Age" id="">
+    <input  [(ngModel)]="DataPerson.nom" type="text" name="nom" id="">
+    <input   [(ngModel)]="DataPerson.prenom"type="text" name="prenom" id="">
+    <input   [(ngModel)]="DataPerson.age" type="number" name="age" id="">
     <button (click)="Add()" class="btn btn-dark">Add</button>
 </form>
-{{ DataPerson.Nom}}
-{{ DataPerson.Prenom}}
-{{ DataPerson.Age}}
+{{ DataPerson.nom}}
+{{ DataPerson.prenom}}
+{{ DataPerson.age}}
 
 <table class="table">
     <thead>
